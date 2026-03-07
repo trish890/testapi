@@ -1,0 +1,27 @@
+PrintFlow API 
+
+1. Project Overview
+PrintFlow is a backend system that helps printing shops manage orders more easily. 
+The system automatically calculates the total printing cost based on the number
+of pages and the type of paper used. 
+
+2. Problem Statement
+Currently, printing orders are recorded manually by writing them down. This can 
+cause mistakes when calculating the total cost, especially when there are different prices 
+for Black & White, Colored, and Photo Paper. There is also a chance that orders may be missing 
+or duplicated. Because of this, the process becomes slow when many orders come in.
+
+3. Objectives
+The goal of the system is to improve the order process in a printing shop 
+by making it faster and more organized. The system aims to:
+Accept printing orders from customers.
+-Automatically calculate the total printing cost.
+-Keep a record of all printing orders.
+-Allow the shop owner to view and manage orders.
+-Allow customers to view the details of their order.
+
+4. Users
+The main users of the system are:
+-Customers
+-Shop Owner 
+-Staff 

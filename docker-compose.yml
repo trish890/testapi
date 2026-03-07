@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  printflow-api:
+    build: .
+    container_name: printflow-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./printflow.db
+      - DEBUG=False
+    volumes:
+      - ./printflow.db:/app/printflow.db
+    restart: unless-stopped
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+
+  # Optional: Add a PostgreSQL service for production use
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: printflow-db
+  #   environment:
+  #     POSTGRES_DB: printflow
+  #     POSTGRES_USER: printflow
+  #     POSTGRES_PASSWORD: your_password_here
+  #   volumes:
+  #     - postgres-data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   postgres-data:
